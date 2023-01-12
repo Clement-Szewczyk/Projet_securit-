@@ -1,0 +1,41 @@
+.titre, div  {
+    color:rgb(246, 240, 240);
+    text-align: center;
+    font-family: arial black;
+    text-decoration: underline;
+}
+
+.background, nav{
+    background-color:rgb(255, 255, 255);
+    width: 100%;
+}
+
+body{
+    background-color: rgb(108, 14, 108);
+}
+
+nav{
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: arial black;
+    font-size: 14pt;
+}
+
+h3 {
+    font-family: arial black;
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 12pt;
+}
+
+.reponsedujeu, a {
+    text-align: center;
+    font-family: arial black;
+    font-size: 12pt;
+}
+
+
