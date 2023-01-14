@@ -1,0 +1,59 @@
+.titre, div  {
+    color:rgb(246, 240, 240);
+    text-align: center;
+    font-family: arial black;
+    text-decoration: underline;
+}
+
+.background, nav{
+    background-color:rgb(255, 255, 255);
+    width: 100%;
+}
+
+body{
+    background-color: rgb(108, 14, 108);
+}
+
+.corps, h2 {
+    text-align: center;
+    color:black;
+    font-family: calibri black;
+    text-decoration: underline;
+    font-size: 18pt;
+}
+
+h3{
+    font-size: 14pt;
+}
+
+figure {
+    display:flex;
+    justify-content: center;
+}
+
+label, option{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+select {
+    width: 200px;
+    margin:auto;
+}
+
+nav{
+    text-align: center;
+}
+
+label {
+    color: black;
+}
+
+input{
+    background-color: orange;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 14pt;
+    
+}

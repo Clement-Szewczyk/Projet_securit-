@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/situation.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/validation.css' %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <title>Extincteur</title>
+</head>
+<body>
+    <div id="reponse">
+        <h1>Bonjour</h1>
+
+        <form  method="post">
+            {% csrf_token %}
+            <!-- Bouton qui lance la fonction incorrect réaliser en JS-->
+            <button class="boutton" 
+            hx-post='/extincteur/situation' 
+            hx-trigger="click"
+            hx-target="#reponse" 
+            hx-swap="outerHTML"> <h3>étape suivante</h3></button>
+        </form>
+    </div>
+</body>
+</html>

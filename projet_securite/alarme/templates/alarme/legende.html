@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Les alarmes</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'alarme/légende.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    
+    
+
+    
+  </head>
+
+
+  <body> 
+    <header>
+      <div id="titre">
+        <h1> Etape 1 : Les alarmes incendies</h1>
+      </div>
+    </header>
+    
+    <nav id="background">
+
+      <br><h2>Consignes :</h2></br>
+
+
+      <h3>L'objectif de cette étape est de pouvoir reconnaitre le signal sonore lors d'une alarme incendie.</h3>
+
+
+      <h2>Le jeu :</h2><h4>(veuillez activer votre son)</h4>
+
+
+      <div style="text-align: center" >
+        <img src="../../static/alarme/img/alarme incendie.png">
+      </div>
+
+
+      <figure id="son1">
+
+        <div>
+          <input type="radio" id="son1" name="son" >
+          <label for="scales">Son 1</label>
+        </div>
+      
+        <audio
+            controls
+            src="../../static/alarme/sound/alarme ambulance.mp3">
+        </audio>
+
+      </figure>
+
+      <figure id="son2">
+
+        <div>
+          <input type="radio" id="son2" name="son">
+          <label for="horns">Son 2</label>
+        </div>
+
+        <audio
+          controls
+          src="../../static/alarme/sound/alarmeincendie.mp3">
+        </audio>
+
+      </figure>
+
+      <figure id="son3">
+
+        <div>
+          <input type="radio" id="son3" name="son">
+          <label for="horns">Son 3</label>
+        </div>
+
+        <audio
+          controls
+          src="../../static/alarme/sound/sirène nucléaire.mp3">
+        </audio>
+
+      </figure>
+
+      <figure id="son4">
+
+        <div>
+          <input type="radio" id="son4" name="son">
+          <label for="horns">Son 4</label>
+        </div>
+
+        <audio
+          controls
+          src="../../static/alarme/sound/sirene police.mp3">
+        </audio>
+
+      </figure>
+
+
+      <br></br>
+      
+      <input type="submit" value="Envoyer la réponse">
+
+
+      <br></br>
+   
+
+
+    </nav> 
+     
+    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+    <footer>
+      
+    </footer>
+  </body>
+</html>
