@@ -1,0 +1,45 @@
+/* Centrage icon */
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+.icon i{
+    font-size: 10em;
+}
+
+/* Changement couleur et taille icon */
+.rouge{
+    color: red;
+
+}
+
+.vert{
+    color: green;
+
+}
+
+
+/* Centrage bouton */
+.dispo{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: 20px;
+     width: 100%;
+     border: 1px solid black;
+     background-color: orange;
+     border-radius: 20px;
+     color: black;
+  }
+ /* Changement couleur quand on passe dessus */
+button:hover{
+    background-color: orangered;
+    color: white;
+  }
+ 
+
+

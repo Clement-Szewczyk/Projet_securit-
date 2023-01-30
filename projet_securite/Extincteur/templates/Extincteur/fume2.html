@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Situation 2 </title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/situation2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/validation2.css' %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+
+</head>
+<body>
+    <!-- Titre  -->
+    <div class="titre">
+        <h1>Etape 5: Le Système de Désenfumage</h1>
+        <img src="../../static/Extincteur/img/fume.jpg" alt="">
+    </div>
+
+    <div class="corp">
+        <!-- Explication de la rêgle du jeu et de la situation-->
+    <div class="texte">
+        <h3> Règle du jeu :</h3>
+
+        <p>Vous devez choisir la bonne réponse en fonction de la situation proposée.</p>
+
+        <h3>La Situation :</h3>
+        <p>Lors d'un incendie, de la fumée se propage dans la cage d'escalier. </p>
+    </div>
+    
+    <!-- Affichage de la vidéo -->
+    <div class="img">
+       <img src="" alt="fume_escalier">
+    </div>
+
+    <!-- Regroupe les boutons -->
+    <div class="dispo" id="button">
+        <!-- Formulaire contenant le bouton -->
+        <form  action="/correct" method="post">
+            {% csrf_token %}
+            <!-- Bouton qui lance la fonction correct réalisé en JS-->
+            <button class="boutton"
+            hx-post='/extincteur/correct' 
+            hx-trigger="click"
+            hx-target="#button" 
+            hx-swap="outerHTML"> <h3>J'active le système de désenfumage</h3></button>
+        </form>
+        <form action="/incorrect" method="post">
+            {% csrf_token %}
+            <!-- Bouton qui lance la fonction incorrect réaliser en JS-->
+            <button class="boutton" 
+            hx-post='/extincteur/incorrect' 
+            hx-trigger="click"
+            hx-target="#button" 
+            hx-swap="outerHTML"> <h3>j'ouvre la porte coupe feu</h3></button>
+        </form>
+    </div>
+
+    </div>
+</body>
+</html>
