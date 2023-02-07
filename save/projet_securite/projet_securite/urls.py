@@ -21,5 +21,6 @@ urlpatterns = [
     path("extincteur/", include("Extincteur.urls")),
     path("", include("alarme.urls")),
     path("porte/", include("porte.urls")),
-    path("fume/", include("fume.urls")),
+    path("evacuation/", include("evacuation.urls")),
+    path("coucou/", include("coucou.urls")),
 ]

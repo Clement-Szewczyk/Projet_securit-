@@ -8,14 +8,14 @@
 
   {% load static %}
 
-  <link rel="stylesheet" type="text/css" href="{% static 'alarme/alarme.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'alarme/alarme2.css' %}" />
 
 </head>
 <body>
     <!-- Titre  -->
     <div class="titre">
         <h1>Etape 2 : Les alarmes incendies</h1>
-        <img src="../../static/alarme/img/alarme incendie.png" alt="">
+        <img src="../../static/alarme/img/alarme incendie.jpg" alt="">
     </div>
 
     <div class="corp">
@@ -77,12 +77,17 @@
 
         <div class="button">
             <br></br> 
-            <label id="texteresult"> </label>
+            <p id="texteresult"> </p>
             <br></br>
             <button id="resultat"  type="submit" onclick="verif_1()"><h3>Envoyer la réponse</h3></button>
         </div>
-
+        
     </div>
+
+    <div class="fin">
+        <img class="svg" src="../../static/alarme/img/junia_white.svg" alt="">
+    </div>
+    
 
     <script>
         function verif_1(){
@@ -96,7 +101,7 @@
             if(rep2.checked==true && rep1.checked==false && rep3.checked==false && rep4.checked==false){
                 document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
                 //Redigérer après 3 secondes
-                setTimeout(function(){window.location.href = "/porte"}, 1000);
+                setTimeout(function(){window.location.href = "/passage/extincteur"}, 500);
             }
             else{
                 document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"

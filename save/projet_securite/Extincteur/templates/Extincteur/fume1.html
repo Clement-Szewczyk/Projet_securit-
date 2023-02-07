@@ -7,7 +7,7 @@
     <title>Jeu de Situation 1 </title>
     {% load static %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/situation2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/situation.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'Extincteur/validation2.css' %}" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,7 +44,7 @@
             {% csrf_token %}
             <!-- Bouton qui lance la fonction correct réalisé en JS-->
             <button class="boutton"
-            hx-post='/extincteur/correct' 
+            hx-post='/extincteur/correct2' 
             hx-trigger="click"
             hx-target="#button" 
             hx-swap="outerHTML"> <h3>J'active le système de désenfumage</h3></button>

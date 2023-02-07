@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Extincteur',
     'alarme',
-    'porte', 
+    'porte',
+    'evacuation', 
+    'coucou',
 ]
 
 MIDDLEWARE = [
@@ -78,12 +80,8 @@ WSGI_APPLICATION = 'projet_securite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'safetypath',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'Admin.MYSQL',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -19,7 +19,7 @@ body{
  }
 
  .titre img{
-  width: 5%;
+  width: 15%;
  }
 
  .corp{
@@ -50,6 +50,9 @@ body{
     width: 40%;
  }
 
+ .escalier{
+  width: 50% !important; 
+ }
 /* Centrage de l'image */
  .dispo{
     max-width:100% ;
@@ -86,4 +89,14 @@ body{
     margin: 10px 0;
   }
  }
-   
+  
+ .fin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.svg {
+  width: 50%;
+}

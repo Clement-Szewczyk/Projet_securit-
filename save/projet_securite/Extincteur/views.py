@@ -4,6 +4,9 @@ from random import randrange
 def correct(request):
     return render(request, "Extincteur/correct.html")
 
+def correct2(request):
+    return render(request, "Extincteur/correct2.html")
+
 def incorrect(request):
     return render(request, "Extincteur/incorrect.html")
 

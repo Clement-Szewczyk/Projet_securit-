@@ -15,7 +15,7 @@
     <!-- Titre  -->
     <div class="titre">
         <h1>Etape 2 : Les alarmes incendies</h1>
-        <img src="../../static/alarme/img/alarme incendie.png" alt="">
+        <img src="../../static/alarme/img/alarme incendie.jpg" alt="">
     </div>
 
     <div class="corp">
@@ -96,7 +96,7 @@
             if(rep2.checked==true && rep1.checked==false && rep3.checked==false && rep4.checked==false){
                 document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
                 //Redigérer après 3 secondes
-                setTimeout(function(){window.location.href = "/porte"}, 1000);
+                setTimeout(function(){window.location.href = "/porte"}, 500);
             }
             else{
                 document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"

@@ -1,0 +1,89 @@
+body{
+  background-color: rgb(108, 14, 108);
+}
+
+
+/* Centrage du titre */
+.titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+ }
+ 
+/* Décoration titre  niveau 1*/
+ .titre h1{
+     color:white;
+     text-decoration: underline;
+ }
+
+ .titre img{
+  width: 15%;
+ }
+
+ .corp{
+  background-color: white;
+ }
+
+/* Centrage du text */
+ .texte{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+ }
+ 
+/* Décoration Titre niveau 3 */ 
+ .texte h3{
+   text-decoration: underline;
+   
+ }
+
+/* Centrage de l'image */
+ .img{
+     display: flex;
+     justify-content: center;
+ }
+
+ /* Dimmension image */
+ .img img{
+    width: 40%;
+ }
+
+/* Centrage de l'image */
+ .dispo{
+    max-width:100% ;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+ }
+ /*Espace Formulaire */
+ .dispo form{
+    margin: 0 10px;
+ }
+
+/* Décoration bouton */
+ .boutton{
+    width: 100%;
+    border: 1px solid black;
+    background-color: orange;
+    border-radius: 20px;
+    color: black;
+ }
+/* Changement couleur quand on passe dessus */
+ .boutton:hover{
+   background-color: orangered;
+   color: white;
+ }
+
+ @media (max-width: 600px) {
+  .dispo{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dispo form{
+    margin: 10px 0;
+  }
+ }
+   

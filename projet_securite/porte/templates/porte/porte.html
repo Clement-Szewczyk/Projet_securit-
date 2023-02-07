@@ -8,7 +8,7 @@
 
     {% load static %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'porte/porte.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'porte/porte2.css' %}" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/htmx.org@1.8.4"></script>
@@ -17,8 +17,8 @@
 <body>
     <!-- Titre  -->
     <div class="titre">
-        <h1>Etape 3 : Les portes coupe feu</h1>
-        <img src="../../static/porte/img/pictogramme.png"/>
+        <h1>Etape 4 : Les portes coupe feu</h1>
+        <img src="../../static/porte/img/th.jpeg"/>
     </div>
 
     <div class="corp">
@@ -80,12 +80,17 @@
 
         <div class="button">
             <br></br> 
-            <label id="texteresult"> </label>
+            <p id="texteresult"> </p>
             <br></br>
             <button id="resultat"  type="submit" onclick="verif_2()"><h3>Envoyer la réponse</h3></button>
         </div>
 
     </div>
+
+    <div class="fin">
+        <img class="svg" src="../../static/alarme/img/junia_white.svg" alt="" />
+    </div>
+
 
     <script>
         function verif_2(){
@@ -105,7 +110,7 @@
             if(rep2.checked==false && rep1.checked==true && rep3.checked==false && rep4.checked==false && rep5.checked==true && rep6.checked==false && rep7.checked==true && rep8.checked==false && rep9.checked==false && rep10.checked==true){
                 document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
                 //Redigérer après 3 secondes
-                setTimeout(function(){window.location.href = "/extincteur"}, 1000);
+                setTimeout(function(){window.location.href = "/passage/fume"}, 500);
             }
             else{
                 document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"
@@ -117,6 +122,5 @@
             }
         }
   </script>
-    </script>
 </body>
 </html>

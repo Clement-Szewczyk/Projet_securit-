@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Extincteur',
     'alarme',
-    'porte', 
+    'porte',
+    'evacuation',
+    'PDR',
+    'passage',
+    'triangle',
+    'handi',
 ]
 
 MIDDLEWARE = [
