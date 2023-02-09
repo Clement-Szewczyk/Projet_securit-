@@ -1,0 +1,12 @@
+<!-- templates/registration/login.html -->
+{% extends 'connect/base.html' %}
+
+{% block content %}
+  <h2>Se connecter</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"><h3>Se connecter</h3></button>
+    <a href="{% url 'register' %}">S'incrire</a>
+  </form>
+{% endblock %}

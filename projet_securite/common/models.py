@@ -10,6 +10,9 @@ class student(models.Model):
     games_completed = models.IntegerField(default=0)
     birth_date = models.DateField(blank=True, null=True)
 
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 
 class qrcode(models.Model):
     qrcode_id = models.AutoField(primary_key=True)

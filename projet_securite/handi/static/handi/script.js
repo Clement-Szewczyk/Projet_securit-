@@ -14,7 +14,7 @@ function verif_2(){
     
     if(rep2.checked==true && rep1.checked==false && rep3.checked==false && rep4.checked==true && rep5.checked==false && rep6.checked==false && rep7.checked==true && rep8.checked==true && rep9.checked==true && rep10.checked==false && rep11.checked==false){
         document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
-        setTimeout(function(){window.location.href = "/passage/evac"}, 500);
+        setTimeout(function(){window.location.href = "/evacuation"}, 500);
     }
     else{
         document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"

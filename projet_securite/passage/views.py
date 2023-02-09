@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from common.models import student
 
 # Create your views here.
 
 
 def alarme(request):
+
     return render(request, 'passage/alarme.html')
 
 
@@ -12,6 +14,7 @@ def extincteur(request):
 
 
 def porte(request):
+
     return render(request, 'passage/porte.html')
 
 

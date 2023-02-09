@@ -19,7 +19,7 @@ function verif_2(){
     // ici c'es la réponse n°2, 1 et 2 qui est correcte
     if(rep2.checked==true && rep1.checked==false && rep3.checked==false && rep4.checked==false && rep5.checked==true && rep6.checked==false && rep7.checked==true && rep8.checked==true && rep9.checked==false && rep10.checked==true && rep11.checked==false && rep12.checked==true && rep13.checked==true && rep14.checked==true && rep15.checked==false){
         document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
-        setTimeout(function(){window.location.href = "/passage"}, 500);
+        setTimeout(function(){window.location.href = "/alarme"}, 500);      
     }
     else{
         document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"
