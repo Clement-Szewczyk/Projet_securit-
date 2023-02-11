@@ -88,6 +88,7 @@
             // ici c'es la réponse n°2 qui est correcte
             if(rep3.checked==true && rep1=="PDR" && rep2.checked==false && rep4.checked==false && rep5.checked==false){
                 document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
+                setTimeout(function(){window.location.href = "/final";}, 500);
             }
             else{
                 document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !"

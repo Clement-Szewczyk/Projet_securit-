@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'handi',
     'common',
     'connect',
+    'final',
 ]
 
 MIDDLEWARE = [

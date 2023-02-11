@@ -2,11 +2,14 @@
 {% extends 'connect/base.html' %}
 
 {% block content %}
-  <h2>Se connecter</h2>
+  <h1>Se connecter :</h1>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit"><h3>Se connecter</h3></button>
-    <a href="{% url 'register' %}">S'incrire</a>
+    <div class="button">
+      <button type="submit"><h3>Se connecter</h3></button>
+      <button onclick="inscrit()"> <h3>S'incrire</h3></button>
+    </div>
+    
   </form>
 {% endblock %}

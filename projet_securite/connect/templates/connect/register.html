@@ -1,11 +1,13 @@
 {% extends 'connect/base.html' %}
 
 {% block content %}
-  <h2>S'inscrire :</h2>
+  <h1>S'inscrire :</h1>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit"><h3>S'inscrire</h3></button>
-    <a href="{% url 'login' %}">Se connecter</a>
+    <div class="button">
+      <button type="submit"><h3>S'inscrire</h3></button>
+      <button onclick="connexion()"> <h3>Se connecter</h3></button>
+    </div>
   </form>
 {% endblock %}
