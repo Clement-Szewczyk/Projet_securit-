@@ -2,14 +2,8 @@ from common.models import student
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, LoginForm
-import bcrypt
+
 # vue page inscription
-
-
-def hash_password(password):
-    salt = bcrypt.gensalt()
-    hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
-    return hashed
 
 
 def register(request):
@@ -22,7 +16,7 @@ def register(request):
             user.email = form.cleaned_data.get('email')
             user.first_name = form.cleaned_data.get('first_name')
             user.last_name = form.cleaned_data.get('last_name')
-            user.password = hash_password(form.cleaned_data.get('password'))
+            user.password = form.cleaned_data.get('password')
             user.save()
             # redirect to login page
             return redirect('login')
@@ -30,23 +24,19 @@ def register(request):
         form = RegisterForm()
     return render(request, 'connect/register.html', {'form': form})
 
-# regard si c'est le super user
-
 
 def verifconect(username, password):
     try:
         user = student.objects.get(email=username)
-        print(user, 'user1')
-        if user.password == password:
+        # transforme le mot de passe en string et l'encode en utf-8
+        # vérifie si le mot de passe est correct
+        if password == user.password:
             return user
         else:
             print('mot de passe incorrect')
             return None
     except student.DoesNotExist:
         return None
-
-
-# fonction cryptage mot de passe
 
 
 def login(request):
@@ -57,17 +47,16 @@ def login(request):
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
             # regarder si la personne qui se connect est le super user
-
-            print(email, password)
             # vérifier si l'utilisateur est inscrit est un superuser de la bdd User
-            if User.objects.filter(email=email).exists():
-                user = User.objects.get(email=email)
+            '''if User.objects.filter(email=email).exists():
+                
                 if user.check_password(password):
-                    return redirect('final/export')
+                    return redirect('final/export')'''
+
+            user = User.objects.get(email=email)
             # vérifier si l'utilisateur est inscrit dans la bdd common.student
 
             user = verifconect(username=email, password=password)
-            print(user, 'user2')
 
             if user == None:
                 form.add_error(None, 'Email ou mot de passe incorrect')
@@ -109,7 +98,7 @@ def login(request):
                 if user.games_completed >= 9:
                     user.games_completed = 0
                     user.save()
-                    return redirect('/final/triche')
+                return redirect('/final/triche')
     else:
         form = LoginForm()
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point de rassemblement </title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'evacuation/evacuation.css' %}">
+    <script src="{% static 'evacuation/script.js' %}"></script>
+
+</head>
+<body>
+    <!-- Titre  -->
+    <div class="titre">
+        <h1>Etape 7 : Le plan d'évacuation</h1>
+        <img src="../../static/evacuation/img/plan.jpg" alt="">
+    </div>
+
+    <div class="corp">
+            <!-- Explication de la rêgle du jeu et de la situation-->
+        <div class="texte">
+            <h3> Consigne </h3>
+
+            <p>L'objectif de cette étape est d'être capable d'identifier les pictogrammes de sécurité. </p>
+
+            <h3>Le jeu :</h3> 
+            
+            <p>Restituer les éléments des cases numérotées sur le plan. </p>
+        </div>
+        
+        <div class="etape">
+            <img src="../../static/evacuation/img/plan.jpg" alt="plan">
+
+            <div class="question">
+                    
+                    <p>Question 1:</p>
+                    <p>Quel est le type de l'extincteur ?</p>
+                    <img src="../../static/evacuation/img/panneau.jpg" alt="">
+                    
+                    <div class="reponse">
+                        <input type="radio" id="q11" name="question">
+                        <label>Extincteur à poudre</label>
+                        <input type="radio" id="q12" name="question">
+                        <label>Extincteur à eau</label>
+                        <input type="radio" id="q13" name="question">
+                        <label>Extincteur à gaz</label>
+                    </div>
+            </div>
+
+            <div class="question">
+                    
+                    <p>Question 2:</p>
+                    <p>Que veut dire ce panneau ?</p>
+                    <img src="../../static/evacuation/img/pdr.jpg" alt="">
+                    
+                    <div class="reponse">
+                        <input type="radio" id="q21" name="question2">
+                        <label>Espace d'attente sécurisé</label>
+                        <input type="radio" id="q22" name="question2">
+                        <label> Point de rassemblement</label>
+                    </div>
+            </div>
+            
+            <div class="question">
+                    
+                    <p>Question 3:</p>
+                    <p>Quel est le numéro associé au panneau ?</p>
+                    <img src="../../static/evacuation/img/tel.jpg" alt="">
+                    
+                    <div class="reponse">
+                        <input type="radio" id="q31" name="question3">
+                        <label>3630</label>
+                        <input type="radio" id="q32" name="question3">
+                        <label>17</label>
+                        <input type="radio" id="q33" name="question3">
+                        <label>13</label>
+                        <input type="radio" id="q34" name="question3">
+                        <label>112</label>
+                    </div>
+            </div>
+
+        </div>
+       
+        <div class="button">
+            <br></br> 
+            <p id="texteresult"> </p>
+            <br></br>
+            <button id="resultat"  type="submit" onclick="verif_2()"><h3>Envoyer la réponse</h3></button>
+        </div>
+
+    </div>
+    <div class="fin">
+        <img class="svg" src="../../static/alarme/img/junia_white.svg" alt="">
+    </div>
+
+
+</body>
+</html>

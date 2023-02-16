@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>connect</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'connect/style.css' %}">
+  <script src="{% static 'connect/script.js' %}"></script>
+</head>
+<body>
+  <div id="container">
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </div>
+</body>
+</html>

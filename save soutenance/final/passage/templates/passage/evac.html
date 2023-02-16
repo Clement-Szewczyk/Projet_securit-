@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSAGE</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'passage/passage2.css' %}">
+    <script src="{% static 'passage/passage.js' %}"></script>
+
+</head>
+<body>
+    <!-- Titre  -->
+    <div class="titre">
+        <h1>Etape Suivante :</h1>
+    </div>
+
+    <div class="corp">
+            <!-- Explication de la rêgle du jeu et de la situation-->
+        <div class="texte">
+            <h3> Petite énigme :</h3>
+
+            <p> On peut retrouver plusieurs plans d'évacuations, trouvez celui qui montre le point d'évacuation ?</p>
+
+            <h3>Réponse</h3> 
+
+            <p>Entrez le code qui est au lieu</p>
+            
+        </div>
+        
+        <div class="reponse">
+            <input type="text" placeholder="Entrez le code" id="evacuation" name="code">
+            <p id="texteresult"> </p>
+        </div>
+        
+        <div class="button">
+            <br></br>
+            <br></br>
+            <button type="submit" onclick="passage()"><h3>Envoyer la réponse</h3></button>
+        </div>
+
+    </div>
+
+    <div class="fin">
+        <img class="svg" src="../../static/alarme/img/junia_white.svg" alt="" />
+    </div>
+
+    <script>
+        function passage(){
+            var code = document.getElementById("evacuation").value;
+            if (code == "évacuation"){
+                document.getElementById("texteresult").innerHTML = "Bravo ! Vous avez réussi !";
+                setTimeout(function(){window.location.href = "/evacuation"}, 500);
+            }else{
+                document.getElementById("texteresult").innerHTML = "Votre réponse est fausse !" ;
+    }
+        }
+    </script>
+</body>
+</html>
