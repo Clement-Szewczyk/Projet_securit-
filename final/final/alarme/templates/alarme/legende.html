@@ -91,13 +91,13 @@
 
     <script>
         function verif_1(){
-            console.log("verif1")
+            // On récupère les éléments des inputs 
             var rep1 = document.getElementById("son1");
             var rep2 = document.getElementById("son2");
             var rep3 = document.getElementById("son3");
             var rep4 = document.getElementById("son4");
 
-            // ici c'es la réponse n°2 qui est correcte
+            // On vérifie l'état des inputs en fonction de ce que l'on veut
             if(rep2.checked==true && rep1.checked==false && rep3.checked==false && rep4.checked==false){
                 document.getElementById("texteresult").innerHTML = "Bravo, bonne réponse !";
                 //Redigérer après 3 secondes

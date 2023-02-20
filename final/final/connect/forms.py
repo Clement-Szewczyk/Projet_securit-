@@ -2,7 +2,7 @@ from django import forms
 from common.models import student
 
 
-# RegisterForm pour la bdd common.student avec ajout mdp crypté, firstname, lastname, birthdate
+# RegisterForm pour la bdd common.student
 class RegisterForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     password2 = forms.CharField(
@@ -24,6 +24,7 @@ class RegisterForm(forms.ModelForm):
         return cd['password2']
 
 
+# LoginForm pour la bdd common.student
 class LoginForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
