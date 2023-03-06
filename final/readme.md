@@ -106,3 +106,7 @@ Vous pouvez accéder à la base de donnée via l'adresse suivante en local:
 http://127.0.0.1:8000/admin
 
 Une fois sur le lien, vous vous connectez avec votre username ainsi que votre mot de passe. 
+
+## Axe d'amélioration 
+
+- Chiffrage de mot de passe
