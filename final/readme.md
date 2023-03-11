@@ -42,7 +42,7 @@ Le projet est basé sur le framework Django. Le site est structuré de la maniè
 13) application passage avec l'affichage de l'enigme evac (réponse : évacuation)
 14) application evacuation 
 15) application PDR (réponse du code : rass)
-16) application fin: 
+16) application fin: (fin du projet t2)
 - si la personne n'a pas triché, on affiche la page d'acceuil de l'application
 - si la personne a triché, on affiche la page triche
 - on utilise cette application pour la page export de donnée. 
