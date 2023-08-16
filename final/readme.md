@@ -87,6 +87,12 @@ Le site sera disponible sur le localhost à l'adresse suivante : http://127.0.0.
 
 ## L'administration :
 
+Mot de passe admin actuel :
+
+- Nom d'utilisateur : admin
+- email : admin@gmail.com
+- mdp : superuser
+
 Pour créer un administrateur, vous devez utilisé la commande suivante 
 
 ```
