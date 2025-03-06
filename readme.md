@@ -2,8 +2,10 @@
 
 ## Constitution du dossier :
 
-- .venv : Environnement virtuel contenant les bibliothèques essentielle au projet. 
 - final : regroupe le projet avec toutes les applications nescésaire au fonctionnement du projet. 
+- Export.pdf : tuto pour gérer les données exportées
+- README.md : fichier de présentation du projet
+- requirements.txt : fichier contenant les dépendances du projet.
 
 ## Constitution du dossier final : 
 
@@ -60,16 +62,36 @@ Le téléchargement du fichier se lancera automatiquement.
 
 Pour lancer le porjet sur un serveur local (sur son ordinateur), il faut: 
 - Ouvrir dans un terminal le dossier principale
-- Activer l'environnement virtuel avec la commande suivant : 
+- Créer l'environnement virtuel avec la commande suivant : 
+
+```bash
+python -m venv env
+```
+Activer l'envirronement virtuel : 
+
+- Sous Windows : 
+```bash
+.\env\scripts\activate
 
 ```
-.venv\scripts\activate
+
+- Sous Linux / Mac : 
+```bash
+source env/bin/activate
 
 ```
+
+Installer les dépendances : 
+
+```bash
+pip install -r requirements.txt
+
+```
+
 
 Vous ouvrez le dossier final
 
-```
+```bash
 
 cd final 
 
@@ -77,12 +99,12 @@ cd final
 
 Lancer le serveur : 
 
-```
+```bash
 python manage.py runserver
 
 ```
 
-Le site sera disponible sur le localhost à l'adresse suivante : http://127.0.0.1:8000/
+Le site sera disponible sur le localhost à l'adresse suivante : [http://127.0.0.1:8000/]
 
 
 ## L'administration :
@@ -95,7 +117,7 @@ Mot de passe admin actuel :
 
 Pour créer un administrateur, vous devez utilisé la commande suivante 
 
-```
+```bash
 python manage.py createsuperuser
 
 ```
