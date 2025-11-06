@@ -24,7 +24,7 @@ cycler==0.12.1
 debugpy==1.8.1
 decorator==5.1.1
 defusedxml==0.7.1
-Django==5.0.7
+Django==5.1.14
 entrypoints==0.4
 executing==2.0.1
 Faker==26.0.0
